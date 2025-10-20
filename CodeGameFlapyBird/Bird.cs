@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
@@ -17,7 +19,7 @@ namespace CodeGameFlapyBird
         public float Gravity {get; set;}
         public float FallSpeed { get; set; }
         public float MaxFallSpeed { get; set; }
-        private SoundPlayer Whoos = new SoundPlayer("Sound\\FlappyWhoos.wav");
+        private SoundPlayer Whoos = new SoundPlayer("Sound\\FlapyWhoos.wav");
         public Bird(PictureBox pictureBox , float G , float F , float M)
         {
             Bird_ = pictureBox;
@@ -56,9 +58,9 @@ namespace CodeGameFlapyBird
         }
         // Bay lên
         public void Jump()
-        {
-            // Whoos.Play();
+        {           
             FallSpeed =- 20f;
+            Whoos.Play();
         }
     }
 }

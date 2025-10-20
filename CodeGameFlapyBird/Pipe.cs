@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.IO;
+using System.Threading;
 
 namespace CodeGameFlapyBird
 {
@@ -21,7 +22,7 @@ namespace CodeGameFlapyBird
         private int FormWidth;
         private int Level = 0;
         private Random rnd = new Random();
-        private SoundPlayer tingSound = new SoundPlayer("Sound\\ScoreSound.wav");
+        private SoundPlayer Ting = new SoundPlayer("Sound\\TingSound.wav");
         public Pipe(PictureBox top, PictureBox bottom, int formWidth, int level , int SpeedGame)
         {
             PipeTop = top;
@@ -90,7 +91,7 @@ namespace CodeGameFlapyBird
         {
             if (Passed == false && bird.Left >= PipeTop.Right)
             {
-                tingSound.Play();
+                Ting.Play();
                 score++;
                 Passed = true;                             
             }

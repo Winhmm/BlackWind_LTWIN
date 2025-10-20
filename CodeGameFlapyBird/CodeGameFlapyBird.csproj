@@ -93,6 +93,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sound\FlapyWhoos.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Images\BackGround\BackGround1.png" />
     <None Include="Images\BackGround\BackGround2.png" />
     <None Include="Images\BackGround\BackGround3.png" />
@@ -115,15 +118,8 @@
     <None Include="Images\Others\HomeImg.png" />
     <Content Include="Images\Others\Game_over2.png" />
     <None Include="Images\Others\PressSpace2.png" />
-    <Content Include="Save.txt" />
     <Content Include="Sound\ButtonHover.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sound\die2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sound\FlappyWhoos.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sound\ScoreSound.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

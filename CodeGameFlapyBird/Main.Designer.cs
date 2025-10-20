@@ -36,8 +36,6 @@
             this.Level = new System.Windows.Forms.ComboBox();
             this.Level_ = new System.Windows.Forms.Label();
             this.QuickHome = new System.Windows.Forms.Button();
-            this.Style_ = new System.Windows.Forms.Label();
-            this.Style = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +51,7 @@
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(135, 22);
             this.Ver.TabIndex = 14;
-            this.Ver.Text = "Version: 0.1.0";
+            this.Ver.Text = "Version: 0.1.5";
             // 
             // StartGame
             // 
@@ -125,28 +123,6 @@
             this.QuickHome.Click += new System.EventHandler(this.QuickHome_Click);
             this.QuickHome.MouseHover += new System.EventHandler(this.QuickHome_MouseHover);
             // 
-            // Style_
-            // 
-            this.Style_.AutoSize = true;
-            this.Style_.BackColor = System.Drawing.Color.Transparent;
-            this.Style_.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Style_.ForeColor = System.Drawing.Color.Red;
-            this.Style_.Location = new System.Drawing.Point(329, 390);
-            this.Style_.Name = "Style_";
-            this.Style_.Size = new System.Drawing.Size(54, 25);
-            this.Style_.TabIndex = 23;
-            this.Style_.Text = "Map";
-            // 
-            // Style
-            // 
-            this.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Style.FormattingEnabled = true;
-            this.Style.Location = new System.Drawing.Point(334, 429);
-            this.Style.Name = "Style";
-            this.Style.Size = new System.Drawing.Size(256, 33);
-            this.Style.TabIndex = 22;
-            this.Style.SelectedIndexChanged += new System.EventHandler(this.Style_SelectedIndexChanged);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -169,16 +145,14 @@
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
-            // FormHome
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.BackGround3;
+            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.BackGround4;
             this.ClientSize = new System.Drawing.Size(626, 635);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Style_);
-            this.Controls.Add(this.Style);
             this.Controls.Add(this.QuickHome);
             this.Controls.Add(this.Level_);
             this.Controls.Add(this.Level);
@@ -189,7 +163,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FormHome";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
@@ -208,8 +182,6 @@
         private System.Windows.Forms.ComboBox Level;
         private System.Windows.Forms.Label Level_;
         private System.Windows.Forms.Button QuickHome;
-        private System.Windows.Forms.Label Style_;
-        private System.Windows.Forms.ComboBox Style;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

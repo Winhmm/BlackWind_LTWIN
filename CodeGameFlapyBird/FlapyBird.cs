@@ -19,8 +19,6 @@ namespace CodeGameFlapyBird
         private int HighScore = 0;
 
         private string savePath = Path.Combine(Application.StartupPath, "Save.txt");
-
-        private SoundPlayer Die = new SoundPlayer("Sound\\die2.wav");
         private SoundPlayer HoverButton = new SoundPlayer("Sound\\ButtonHover.wav");
 
         private bool isJumping = false;
@@ -29,52 +27,22 @@ namespace CodeGameFlapyBird
         private Random Rnd = new Random();
         public int Level { get; private set; } = 1;
         public int Map { get; private set; } = 1;
-        public Game(int LevelFromHome , int MapFromHome)
+        public Game(int LevelFromHome)
         {
             Level = LevelFromHome;
-            Map = MapFromHome;
+            int Speed = (Level == 4 ? 18 : 7);
 
             InitializeComponent();
-            this.DoubleBuffered = true;
+            this.DoubleBuffered = true;         
 
-            // Map
-            if (Level == 4)
-            {
-                if(Map == 1)
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare1;
-                }
-                if (Map == 2) 
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare2;
-                }
-            }
-            else
-            {
-                if (Map == 1)
-                {
-                    this.BackgroundImage = Properties.Resources.BackGround3;
-                }
-                if (Map == 2)
-                {
-                    this.BackgroundImage = Properties.Resources.Forest;
-                }
-            }
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-
-            myBird1 = new Bird(Bird1 , 3f , 0 , 9f);
-
-            int Speed = (Level == 4 ? 18 : 7);
-            P1 = new Pipe(Pt1, Pb1, this.Width, Level , Speed);   
-            
+            myBird1 = new Bird(Bird1 , 3f , 0 , 9f);          
+            P1 = new Pipe(Pt1, Pb1, this.Width, Level , Speed);             
             Ground_ = new Ground(Ground1 , Ground2 , 5);
         }
         // Load
         private void Game_Load(object sender, System.EventArgs e)
         {
-            timer1.Interval = 16;
-                
-
+            timer1.Interval = 16;             
             if (!File.Exists(savePath))
             {
                 File.WriteAllText(savePath, "BEST SCORE: 0");
@@ -94,12 +62,9 @@ namespace CodeGameFlapyBird
         // Thời gian
         private void timer1_Tick(object sender, System.EventArgs e)
         {
-            Ground_.AutoMoveGround();
-
-            
+            Ground_.AutoMoveGround();           
             myBird1.Update(Ground1 , P1);
-            P1.Update();
-            
+            P1.Update();          
 
             if (myBird1.Dead == true)
             {                
@@ -111,9 +76,8 @@ namespace CodeGameFlapyBird
                 
                 PlayAgain.Focus();      
             }
-            P1.CheckScore(Bird1, ref score);
-            
 
+            P1.CheckScore(Bird1, ref score);          
             Score.Text = score.ToString();
 
             // ghi điểm cao nhất
@@ -141,16 +105,16 @@ namespace CodeGameFlapyBird
         
         // Thao tác để bay và bắt đầu
         private bool gameStarted = false;
-        private void Game_KeyDown(object sender, KeyEventArgs e)
+        private void Game_KeyPress(object sender, KeyPressEventArgs e)
         {
             PressSpace.Visible = false;
-            if (e.KeyCode == Keys.Space && !gameStarted)
+            if (e.KeyChar == ' ' && !gameStarted)
             {
                 gameStarted = true;
-                timer1.Enabled = true;
+                timer1.Start();
 
             }
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyChar == ' ')
             {
                 Bird1.Image = Properties.Resources.Up;
                 myBird1.Jump();
@@ -158,20 +122,14 @@ namespace CodeGameFlapyBird
                 jumpDuration = 12;
             }
 
+            
+        }    
+        private void Game_KeyUp(object sender, KeyEventArgs e)
+        {
             if (myBird1.Dead)
             {
-                if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
-                {
-                    PlayAgain.Focus();
-                }
-                else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
-                {
-                    Quit.Focus();
-                }
-                 
-
+                PlayAgain.Focus();
             }
-
         }
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -182,7 +140,7 @@ namespace CodeGameFlapyBird
         private void PlayAgain_Click(object sender, System.EventArgs e)
         {
             
-            Game newGame = new Game(Level, Map);
+            Game newGame = new Game(Level);
             newGame.Show();
             this.Hide();
         }
@@ -214,5 +172,7 @@ namespace CodeGameFlapyBird
         {
             HoverButton.Play();
         }
+
+        
     }
 }

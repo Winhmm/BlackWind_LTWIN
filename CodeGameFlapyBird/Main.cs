@@ -17,7 +17,6 @@ namespace CodeGameFlapyBird
     public partial class Main : Form
     {
         private int selectedLevel;
-        private int selectedStyle;
 
         private string savePath = Path.Combine(Application.StartupPath, "Save.txt");
         private SoundPlayer HoverButton = new SoundPlayer("Sound\\ButtonHover.wav");
@@ -25,15 +24,11 @@ namespace CodeGameFlapyBird
         {
             InitializeComponent();           
 
-            Level.Items.Add("Easy");
-            Level.Items.Add("Medium");
-            Level.Items.Add("Hard");
-            Level.Items.Add("Nightmare");
-
-            Style.Items.Add("Map 1");
-            Style.Items.Add("Map 2");
-
-            Style.SelectedIndex = 0;
+            Level.Items.Add("Level 1");
+            Level.Items.Add("Level 2");
+            Level.Items.Add("Level 3");
+            Level.Items.Add("Level 4");
+          
             Level.SelectedIndex = 0;
 
             if (!File.Exists(savePath))
@@ -48,59 +43,9 @@ namespace CodeGameFlapyBird
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedLevel = Level.SelectedIndex + 1;       
-
-            if(selectedLevel == 4)
-            {
-                if(selectedStyle == 1)
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare1;
-                }
-                if (selectedStyle == 2) 
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare2;
-                }
-            }
-            else
-            {
-                if (selectedStyle == 1)
-                {
-                    this.BackgroundImage = Properties.Resources.BackGround3;
-                }
-                if (selectedStyle == 2)
-                {
-                    this.BackgroundImage = Properties.Resources.Forest;
-                }
-            }
+            selectedLevel = Level.SelectedIndex + 1;                 
         }
-        private void Style_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedStyle = Style.SelectedIndex + 1;
-            if (selectedStyle == 1)
-            {
-                if (selectedLevel == 4)
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare1;
-                }
-                else
-                {
-                    this.BackgroundImage = Properties.Resources.BackGround3;
-                }
-            }
-            else
-            {
-
-                if (selectedLevel == 4)
-                {
-                    this.BackgroundImage = Properties.Resources.NightMare2;
-                }
-                else
-                {
-                    this.BackgroundImage = Properties.Resources.Forest;
-                }
-            }
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-        }
+        
         private void BackGroundHome_Click(object sender, EventArgs e)
         {
             Level_.Focus();
@@ -114,16 +59,14 @@ namespace CodeGameFlapyBird
         {
             File.WriteAllText(savePath, "BEST SCORE: 0");
             int level = Level.SelectedIndex + 1;
-            int Map = Style.SelectedIndex + 1;
-            Game Gem = new Game(level, Map);
+            Game Gem = new Game(level);
             Gem.Show();
             this.Hide();
         }
         private void ContinueGame_Click(object sender, EventArgs e)
         {
             int level = Level.SelectedIndex + 1;
-            int Map = Style.SelectedIndex + 1;
-            Game Gem = new Game(level,Map);           
+            Game Gem = new Game(level);           
             Gem.Show();
             this.Hide();
         }

@@ -231,7 +231,8 @@
             this.Text = "Flapy Bird";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Game_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Ground2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ground1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).EndInit();
