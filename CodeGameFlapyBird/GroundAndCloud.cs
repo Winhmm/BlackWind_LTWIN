@@ -10,9 +10,9 @@ namespace CodeGameFlapyBird
     internal class Ground
     {
         // Xử lí mặt đất duy chuyển
-        private PictureBox Ground1;
-        private PictureBox Ground2;
-        private int groundSpeed = 0;
+        private PictureBox Ground1 { get; set; }
+        private PictureBox Ground2 { get; set; }
+        private int groundSpeed { get; set; } = 0;
 
         public Ground(PictureBox ground1, PictureBox ground2, int groundSpeed)
         {

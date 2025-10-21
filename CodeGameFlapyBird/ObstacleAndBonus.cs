@@ -25,12 +25,12 @@ namespace CodeGameFlapyBird
         private int Level { get; set; } = 0;
         private bool AppleTaken { get; set; } = false;
 
-        public PictureBox FlyObstacle;  
-        private int flySpeedY = 3;      
-        private bool flyDown = true;    
+        public PictureBox FlyObstacle { get; set; }  
+        private int flySpeedY { get; set; } = 3;      
+        private bool flyDown { get; set; } = true;    
 
         private WindowsMediaPlayer Ting { get; set; }
-        private Random rnd = new Random();
+        private Random rnd { get; set; } = new Random();
         public ObstacleAndBonus(PictureBox top, PictureBox bottom, PictureBox point, PictureBox FlyObstacle_ , int formWidth, int level , int SpeedGame)
         {
             PipeTop = top;

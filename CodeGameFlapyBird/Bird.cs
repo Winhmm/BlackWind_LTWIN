@@ -20,7 +20,7 @@ namespace CodeGameFlapyBird
         private float Gravity {get; set;}
         private float FallSpeed { get; set; }
         private float MaxFallSpeed { get; set; }
-        private int GrowCount = 0;
+        private int GrowCount { get; set; } = 0;
         // Khởi tạo trường hợp riêng cho âm thanh
         private WindowsMediaPlayer whoos { get; set; }
         private WindowsMediaPlayer EatApple { get; set; }
@@ -58,7 +58,7 @@ namespace CodeGameFlapyBird
             if (Bird_.Width > 100) Bird_.Width = 100;
             if (Bird_.Height > 100) Bird_.Height = 100;
         }
-        public bool Dead { get; set; } = false; // Kiểm tra nằm đất
+        public bool Dead { get; private set; } = false; // Kiểm tra nằm đất
         public void Update(PictureBox Ground_t , ObstacleAndBonus T)
         {
             FallSpeed += Gravity;            

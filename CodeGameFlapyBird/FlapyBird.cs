@@ -11,20 +11,20 @@ namespace CodeGameFlapyBird
     public partial class Game : Form
     {
         
-        private Bird myBird1;
-        private ObstacleAndBonus P1;
-        private Ground Ground_;
+        private Bird myBird1 { get; set; }
+        private ObstacleAndBonus P1 { get; set; }
+        private Ground Ground_ { get; set; }
 
         private int score = 0;
-        private int HighScore = 0;
+        private int HighScore { get; set; } = 0;
 
         private string savePath = Path.Combine(Application.StartupPath, "Save.txt");
         private SoundPlayer HoverButton = new SoundPlayer("Sound\\ButtonHover.wav");
 
-        private bool isJumping = false;
-        private int jumpDuration = 0;
+        private bool isJumping { get; set; } = false;
+        private int jumpDuration { get; set; } = 0;
 
-        private Random Rnd = new Random();
+        private Random Rnd { get; set; } = new Random();
         public int Level { get; private set; } = 1;
         public int Speed { get; private set; } = 7;
         public Game(int LevelFromHome)
@@ -165,7 +165,7 @@ namespace CodeGameFlapyBird
         
         
         // Thao tác để bay và bắt đầu
-        private bool gameStarted = false;
+        private bool gameStarted { get; set; } = false;
         private void Game_KeyPress(object sender, KeyPressEventArgs e)
         {
             PressSpace.Visible = false;
