@@ -121,11 +121,8 @@
   <data name="HomeImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Others\HomeImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pipe-green-T" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Level1PipeT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Obstacles\pipe-green-T.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BackGround4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\BackGround\BackGround4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Game_over2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Others\Game_over2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +136,8 @@
   <data name="DarkWind" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Others\DarkWind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pipe-green-B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Level1PipeB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Obstacles\pipe-green-B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NightMare1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\BackGround\NightMare1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Birds\Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,16 +145,49 @@
   <data name="Horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Birds\Horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Level1Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Ground\base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NightMare2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\BackGround\NightMare2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\BackGround\Forest2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DarkWind1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Others\DarkWind1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level1BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\BackGround\Level1BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level2BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\BackGround\Level2BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level2PipeB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Level2PipeB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level2PipeT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Level2PipeT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Ground\Level2Base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level3BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\BackGround\Level3BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level3PipeB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Level3PipeB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level3Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Ground\Level3Base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Level3PipeT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Level3PipeT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cactus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Cactus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Helicopter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Helicopter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Obstacles\Apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

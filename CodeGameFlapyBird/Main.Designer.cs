@@ -38,8 +38,12 @@
             this.QuickHome = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Pipe = new System.Windows.Forms.PictureBox();
+            this.Base = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Base)).BeginInit();
             this.SuspendLayout();
             // 
             // Ver
@@ -51,7 +55,7 @@
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(135, 22);
             this.Ver.TabIndex = 14;
-            this.Ver.Text = "Version: 0.1.5";
+            this.Ver.Text = "Version: 0.2.0";
             // 
             // StartGame
             // 
@@ -83,7 +87,7 @@
             this.BestScore.BackColor = System.Drawing.Color.Transparent;
             this.BestScore.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BestScore.ForeColor = System.Drawing.Color.Red;
-            this.BestScore.Location = new System.Drawing.Point(18, 246);
+            this.BestScore.Location = new System.Drawing.Point(1, 68);
             this.BestScore.Name = "BestScore";
             this.BestScore.Size = new System.Drawing.Size(215, 33);
             this.BestScore.TabIndex = 17;
@@ -91,6 +95,7 @@
             // 
             // Level
             // 
+            this.Level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Level.FormattingEnabled = true;
             this.Level.Location = new System.Drawing.Point(334, 321);
@@ -145,12 +150,35 @@
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
+            // Pipe
+            // 
+            this.Pipe.BackColor = System.Drawing.Color.Transparent;
+            this.Pipe.Image = global::CodeGameFlapyBird.Properties.Resources.Level1PipeB;
+            this.Pipe.Location = new System.Drawing.Point(463, 409);
+            this.Pipe.Name = "Pipe";
+            this.Pipe.Size = new System.Drawing.Size(79, 411);
+            this.Pipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pipe.TabIndex = 26;
+            this.Pipe.TabStop = false;
+            // 
+            // Base
+            // 
+            this.Base.Image = global::CodeGameFlapyBird.Properties.Resources.Level1Base;
+            this.Base.Location = new System.Drawing.Point(355, 555);
+            this.Base.Name = "Base";
+            this.Base.Size = new System.Drawing.Size(281, 113);
+            this.Base.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Base.TabIndex = 27;
+            this.Base.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.BackGround4;
+            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.Level1BG;
             this.ClientSize = new System.Drawing.Size(626, 635);
+            this.Controls.Add(this.Base);
+            this.Controls.Add(this.Pipe);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.QuickHome);
@@ -169,6 +197,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Base)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +214,7 @@
         private System.Windows.Forms.Button QuickHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox Pipe;
+        private System.Windows.Forms.PictureBox Base;
     }
 }

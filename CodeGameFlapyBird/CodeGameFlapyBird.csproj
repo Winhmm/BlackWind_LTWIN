@@ -60,7 +60,7 @@
       <DependentUpon>FlapyBird.cs</DependentUpon>
     </Compile>
     <Compile Include="GroundAndCloud.cs" />
-    <Compile Include="Pipe.cs" />
+    <Compile Include="ObstacleAndBonus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
@@ -93,19 +93,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\BackGround\Level1BG.png" />
+    <Content Include="Images\BackGround\Level2BG.jpg" />
+    <Content Include="Images\BackGround\Level3BG.jpg" />
+    <Content Include="Images\Birds\Down.png" />
+    <Content Include="Images\Birds\Up.png" />
+    <Content Include="Images\Ground\Level2Base.png" />
+    <Content Include="Images\Ground\Level3Base.png" />
+    <Content Include="Images\Obstacles\Apple.png" />
+    <Content Include="Images\Obstacles\Cactus.png" />
+    <Content Include="Images\Obstacles\Cloud.png" />
+    <Content Include="Images\Obstacles\Helicopter.png" />
+    <Content Include="Images\Obstacles\Level2PipeB.png" />
+    <Content Include="Images\Obstacles\Level2PipeT.png" />
+    <Content Include="Images\Obstacles\Level3PipeB.png" />
+    <Content Include="Images\Obstacles\Level3PipeT.png" />
     <Content Include="Sound\FlapyWhoos.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Images\BackGround\BackGround1.png" />
-    <None Include="Images\BackGround\BackGround2.png" />
-    <None Include="Images\BackGround\BackGround3.png" />
-    <None Include="Images\BackGround\BackGround4.png" />
-    <Content Include="Images\BackGround\Forest.png" />
-    <Content Include="Images\BackGround\Forest2.png" />
-    <Content Include="Images\BackGround\NightMare1.png" />
-    <Content Include="Images\BackGround\NightMare2.png" />
-    <Content Include="Images\Birds\bluebird-downflap.png" />
-    <Content Include="Images\Birds\Flappy-Bird.png" />
     <None Include="Images\Birds\Horizontal.png" />
     <Content Include="Images\Ground\base.png" />
     <Content Include="Images\Others\DarkWind.ico" />

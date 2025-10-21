@@ -63,9 +63,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _base {
+        internal static System.Drawing.Bitmap Apple {
             get {
-                object obj = ResourceManager.GetObject("base", resourceCulture);
+                object obj = ResourceManager.GetObject("Apple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackGround4 {
+        internal static System.Drawing.Bitmap Cactus {
             get {
-                object obj = ResourceManager.GetObject("BackGround4", resourceCulture);
+                object obj = ResourceManager.GetObject("Cactus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud {
+            get {
+                object obj = ResourceManager.GetObject("Cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Forest {
+        internal static System.Drawing.Bitmap Game_over2 {
             get {
-                object obj = ResourceManager.GetObject("Forest", resourceCulture);
+                object obj = ResourceManager.GetObject("Game_over2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Game_over2 {
+        internal static System.Drawing.Bitmap Helicopter {
             get {
-                object obj = ResourceManager.GetObject("Game_over2", resourceCulture);
+                object obj = ResourceManager.GetObject("Helicopter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +163,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NightMare1 {
+        internal static System.Drawing.Bitmap Level1Base {
             get {
-                object obj = ResourceManager.GetObject("NightMare1", resourceCulture);
+                object obj = ResourceManager.GetObject("Level1Base", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +173,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NightMare2 {
+        internal static System.Drawing.Bitmap Level1BG {
             get {
-                object obj = ResourceManager.GetObject("NightMare2", resourceCulture);
+                object obj = ResourceManager.GetObject("Level1BG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +183,9 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pipe_green_B {
+        internal static System.Drawing.Bitmap Level1PipeB {
             get {
-                object obj = ResourceManager.GetObject("pipe-green-B", resourceCulture);
+                object obj = ResourceManager.GetObject("Level1PipeB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +193,89 @@ namespace CodeGameFlapyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pipe_green_T {
+        internal static System.Drawing.Bitmap Level1PipeT {
             get {
-                object obj = ResourceManager.GetObject("pipe-green-T", resourceCulture);
+                object obj = ResourceManager.GetObject("Level1PipeT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level2Base {
+            get {
+                object obj = ResourceManager.GetObject("Level2Base", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level2BG {
+            get {
+                object obj = ResourceManager.GetObject("Level2BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level2PipeB {
+            get {
+                object obj = ResourceManager.GetObject("Level2PipeB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level2PipeT {
+            get {
+                object obj = ResourceManager.GetObject("Level2PipeT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level3Base {
+            get {
+                object obj = ResourceManager.GetObject("Level3Base", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level3BG {
+            get {
+                object obj = ResourceManager.GetObject("Level3BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level3PipeB {
+            get {
+                object obj = ResourceManager.GetObject("Level3PipeB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level3PipeT {
+            get {
+                object obj = ResourceManager.GetObject("Level3PipeT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

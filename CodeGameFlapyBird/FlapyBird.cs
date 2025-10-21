@@ -12,7 +12,7 @@ namespace CodeGameFlapyBird
     {
         
         private Bird myBird1;
-        private Pipe P1;
+        private ObstacleAndBonus P1;
         private Ground Ground_;
 
         private int score = 0;
@@ -26,18 +26,17 @@ namespace CodeGameFlapyBird
 
         private Random Rnd = new Random();
         public int Level { get; private set; } = 1;
-        public int Map { get; private set; } = 1;
+        public int Speed { get; private set; } = 7;
         public Game(int LevelFromHome)
         {
             Level = LevelFromHome;
-            int Speed = (Level == 4 ? 18 : 7);
 
             InitializeComponent();
             this.DoubleBuffered = true;         
 
             myBird1 = new Bird(Bird1 , 3f , 0 , 9f);          
-            P1 = new Pipe(Pt1, Pb1, this.Width, Level , Speed);             
-            Ground_ = new Ground(Ground1 , Ground2 , 5);
+            P1 = new ObstacleAndBonus(Pt1, Pb1, Apple, FlyObstacle, this.Width, Level, Speed);             
+            Ground_ = new Ground(Ground1 , Ground2 , 5 );
         }
         // Load
         private void Game_Load(object sender, System.EventArgs e)
@@ -47,6 +46,41 @@ namespace CodeGameFlapyBird
             {
                 File.WriteAllText(savePath, "BEST SCORE: 0");
             }
+
+            if (Level == 1)
+            {
+                this.BackgroundImage = Properties.Resources.Level1BG;
+                Pb1.Image = Properties.Resources.Level1PipeB;
+                Pt1.Image = Properties.Resources.Level1PipeT;
+                FlyObstacle.Image = Properties.Resources.Cloud;
+                Ground1.Image = Properties.Resources.Level1Base;
+                Ground2.Image = Properties.Resources.Level1Base;
+                Best_score.ForeColor = Color.Red;
+                Score.ForeColor = Color.Red;
+            }
+            else if (Level == 2)
+            {
+                this.BackgroundImage = Properties.Resources.Level2BG;
+                Pb1.Image = Properties.Resources.Level2PipeB;
+                Pt1.Image = Properties.Resources.Level2PipeT;
+                FlyObstacle.Image = Properties.Resources.Cactus;
+                Ground1.Image = Properties.Resources.Level2Base;
+                Ground2.Image = Properties.Resources.Level2Base;
+                Best_score.ForeColor = Color.White;
+                Score.ForeColor = Color.White;
+            }
+            else if (Level == 3)
+            {
+                this.BackgroundImage = Properties.Resources.Level3BG;
+                Pb1.Image = Properties.Resources.Level3PipeB;
+                Pt1.Image = Properties.Resources.Level3PipeT;
+                FlyObstacle.Image = Properties.Resources.Helicopter;
+                Ground1.Image = Properties.Resources.Level3Base;
+                Ground2.Image = Properties.Resources.Level3Base;
+                Best_score.ForeColor = Color.LawnGreen;
+                Score.ForeColor = Color.LawnGreen;
+            }
+            this.BackgroundImageLayout = ImageLayout.Stretch;
 
             // Lấy điểm từ trong txt
             string text = File.ReadAllText(savePath);
@@ -59,6 +93,8 @@ namespace CodeGameFlapyBird
             }
 
         }
+        
+
         // Thời gian
         private void timer1_Tick(object sender, System.EventArgs e)
         {
@@ -79,6 +115,31 @@ namespace CodeGameFlapyBird
 
             P1.CheckScore(Bird1, ref score);          
             Score.Text = score.ToString();
+
+            if (score < 10)
+            {
+                P1.IncreaseSpeed(7); // tốc độ ban đầu
+            }
+            else if (score < 20)
+            {
+                P1.IncreaseSpeed(10); // sau 10 điểm
+            }
+            else if (score < 30)
+            {
+                P1.IncreaseSpeed(13);
+            }
+            else if (score < 40)
+            {
+                P1.IncreaseSpeed(16);
+            }
+            else if (score < 50)
+            {
+                P1.IncreaseSpeed(19);
+            }
+            else
+            {
+                P1.IncreaseSpeed(21); // tối đa
+            }
 
             // ghi điểm cao nhất
             if (HighScore < score)

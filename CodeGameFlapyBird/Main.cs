@@ -24,10 +24,9 @@ namespace CodeGameFlapyBird
         {
             InitializeComponent();           
 
-            Level.Items.Add("Level 1");
-            Level.Items.Add("Level 2");
-            Level.Items.Add("Level 3");
-            Level.Items.Add("Level 4");
+            Level.Items.Add("Level 1 (Beach)");
+            Level.Items.Add("Level 2 (Desert)");
+            Level.Items.Add("Level 3 (City)");
           
             Level.SelectedIndex = 0;
 
@@ -43,7 +42,32 @@ namespace CodeGameFlapyBird
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedLevel = Level.SelectedIndex + 1;                 
+            selectedLevel = Level.SelectedIndex + 1;
+            if (selectedLevel == 1)
+            {
+                this.BackgroundImage = Properties.Resources.Level1BG;
+                Pipe.Image = Properties.Resources.Level1PipeB;
+                Base.Image = Properties.Resources.Level1Base;
+                BestScore.ForeColor = Color.Red;
+                Level_.ForeColor = Color.Red;
+            }
+            else if (selectedLevel == 2)
+            {
+                this.BackgroundImage = Properties.Resources.Level2BG;
+                Pipe.Image = Properties.Resources.Level2PipeB;
+                Base.Image = Properties.Resources.Level2Base;
+                BestScore.ForeColor = Color.White;
+                Level_.ForeColor = Color.White;
+            }
+            else if (selectedLevel == 3)
+            {
+                this.BackgroundImage = Properties.Resources.Level3BG;
+                Pipe.Image = Properties.Resources.Level3PipeB;
+                Base.Image = Properties.Resources.Level3Base;
+                BestScore.ForeColor = Color.LawnGreen;
+                Level_.ForeColor = Color.LawnGreen;
+            }
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         
         private void BackGroundHome_Click(object sender, EventArgs e)

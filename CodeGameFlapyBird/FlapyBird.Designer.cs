@@ -43,6 +43,8 @@
             this.Pt1 = new System.Windows.Forms.PictureBox();
             this.Bird1 = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.Button();
+            this.Apple = new System.Windows.Forms.PictureBox();
+            this.FlyObstacle = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Ground2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ground1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
@@ -50,6 +52,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bird1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Apple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlyObstacle)).BeginInit();
             this.SuspendLayout();
             // 
             // Score
@@ -204,14 +208,38 @@
             this.Home.Click += new System.EventHandler(this.Home_Click);
             this.Home.MouseHover += new System.EventHandler(this.Home_MouseHover);
             // 
+            // Apple
+            // 
+            this.Apple.BackColor = System.Drawing.Color.Transparent;
+            this.Apple.Image = global::CodeGameFlapyBird.Properties.Resources.Apple;
+            this.Apple.Location = new System.Drawing.Point(851, 237);
+            this.Apple.Name = "Apple";
+            this.Apple.Size = new System.Drawing.Size(32, 38);
+            this.Apple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Apple.TabIndex = 14;
+            this.Apple.TabStop = false;
+            // 
+            // FlyObstacle
+            // 
+            this.FlyObstacle.BackColor = System.Drawing.Color.Transparent;
+            this.FlyObstacle.Image = global::CodeGameFlapyBird.Properties.Resources.Cloud;
+            this.FlyObstacle.Location = new System.Drawing.Point(910, 36);
+            this.FlyObstacle.Name = "FlyObstacle";
+            this.FlyObstacle.Size = new System.Drawing.Size(187, 98);
+            this.FlyObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FlyObstacle.TabIndex = 15;
+            this.FlyObstacle.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.BackGround4;
+            this.BackgroundImage = global::CodeGameFlapyBird.Properties.Resources.Level1BG;
             this.ClientSize = new System.Drawing.Size(626, 635);
             this.Controls.Add(this.GameOver);
+            this.Controls.Add(this.FlyObstacle);
+            this.Controls.Add(this.Apple);
             this.Controls.Add(this.Bird1);
             this.Controls.Add(this.Best_score);
             this.Controls.Add(this.Score);
@@ -240,6 +268,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bird1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Apple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlyObstacle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +290,8 @@
         private System.Windows.Forms.Button PlayAgain;
         private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.Button Home;
+        private System.Windows.Forms.PictureBox Apple;
+        private System.Windows.Forms.PictureBox FlyObstacle;
     }
 }
 

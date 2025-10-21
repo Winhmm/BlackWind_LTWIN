@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
@@ -15,20 +16,50 @@ namespace CodeGameFlapyBird
     // Lớp chim
     internal class Bird
     {
-        public PictureBox Bird_;
-        public float Gravity {get; set;}
-        public float FallSpeed { get; set; }
-        public float MaxFallSpeed { get; set; }
-        private SoundPlayer Whoos = new SoundPlayer("Sound\\FlapyWhoos.wav");
+        private PictureBox Bird_;
+        private float Gravity {get; set;}
+        private float FallSpeed { get; set; }
+        private float MaxFallSpeed { get; set; }
+        private int GrowCount = 0;
+        // Khởi tạo trường hợp riêng cho âm thanh
+        private WindowsMediaPlayer whoos { get; set; }
+        private WindowsMediaPlayer EatApple { get; set; }
         public Bird(PictureBox pictureBox , float G , float F , float M)
         {
             Bird_ = pictureBox;
             Gravity = G;
             FallSpeed = F;
             MaxFallSpeed = M;
+
+            //
+            whoos = new WindowsMediaPlayer();
+            whoos.URL = "Sound\\FlapyWhoos.wav";          
+            whoos.settings.volume = 100;
+            whoos.controls.stop();
+            //
+            EatApple = new WindowsMediaPlayer();
+            EatApple.URL = "Sound\\ScoreSound.wav";
+            EatApple.settings.volume = 100;
+            EatApple.controls.stop();
+
         }
-        public bool Dead { get; private set; } = false; // Kiểm tra nằm đất
-        public void Update(PictureBox Ground_t , Pipe T)
+        private void Grow()
+        {
+            GrowCount++;
+
+            Bird_.Width += 15;
+            Bird_.Height += 15;
+
+            Gravity += 2;
+
+            // Bird_.Top -= 2;
+            // Bird_.Left -= 2;
+
+            if (Bird_.Width > 100) Bird_.Width = 100;
+            if (Bird_.Height > 100) Bird_.Height = 100;
+        }
+        public bool Dead { get; set; } = false; // Kiểm tra nằm đất
+        public void Update(PictureBox Ground_t , ObstacleAndBonus T)
         {
             FallSpeed += Gravity;            
             // Chặn đất
@@ -55,12 +86,24 @@ namespace CodeGameFlapyBird
             {
                 Dead = true; 
             }
+            if (Bird_.Bounds.IntersectsWith(T.Point.Bounds) && T.Point.Visible)
+            {              
+                EatApple.controls.stop();
+                EatApple.controls.play();
+                T.Point.Visible = false;
+                Grow();
+            }
+            if (T.FlyObstacle != null && T.FlyObstacle.Visible && Bird_.Bounds.IntersectsWith(T.FlyObstacle.Bounds))
+            {
+                Dead = true;
+            }
         }
         // Bay lên
         public void Jump()
-        {           
-            FallSpeed =- 20f;
-            Whoos.Play();
+        {
+            whoos.controls.stop();
+            whoos.controls.play();
+            FallSpeed =- 20f;           
         }
     }
 }
